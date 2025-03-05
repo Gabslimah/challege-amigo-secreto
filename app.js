@@ -1,28 +1,30 @@
-let amigos = [];
-let sorteados = [];
+ let amigos = [];
+ let sorteados = [];
 
  function adicionarAmigo() {
     const input = document.getElementById("amigo");
     let nome = input.value.trim();
 
 if(nome === ""|| !isNaN(nome)) {
-    alert("Insira pelo menos um nome")
-}
-    }
+    alert("Insira pelo menos um nome");
+    return;
+   }
 
-amigos.push(nome);
-atualizarLista();
 
-input.value = "";
+    amigos.push(item);
+    atualizarLista();
+    input.value = "";
+}   
 
-function atualizarLista() {
+ function atualizarLista() {
     let listaAmigos = document.getElementById( "listaAmigos");
     listaAmigos.inner.HTML = "";
     amigos.forEach((amigo, index) => {
     const li = document.createElement("li");
     li.textContent = amigo +  (index < amigo.length -1 ? ";" : "");
-    listaAmigos.appendChild(li); })
+    listaAmigos.appendChild(li); });
 }
+
  function sortearAmigo() {
     if (amigos.length === 0) {
        alert("Nenhum nome inserido, para jogar insira um nome válido.");
@@ -30,20 +32,21 @@ function atualizarLista() {
     }
     if (amigos.length === 4) {
         alert("É necessário mais de 4 participantes para todos terem seus amigos secretos");
+        return;
     }
  }
 
-let sorteado = Match.floor(Match.random() * amigos.length);
+ let sorteado = Match.floor(Match.random() * amigos.length);
 
-let amigoSorteado = amigos[sorteado];
+ let amigoSorteado = amigos[sorteado];
 
-sorteados.push(amigoSorteado);
+ sorteados.push(amigoSorteado);
 
-const resultado = document.getElementById("resultado");
+ const resultado = document.getElementById("resultado");
 
-resultado.innerHTML = "O seu amigo secreto é: " + sorteados;
+ resultado.innerHTML = "O seu amigo secreto é: " + sorteados;
 
-atualizarLista();
+  atualizarLista();
 
 
 
