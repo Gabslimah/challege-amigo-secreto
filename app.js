@@ -1,18 +1,16 @@
-let amigos= []
+let amigos = [];
 
-function adicionarAmigo(){
-    let inputAmigo = document.getElementById("Amigo");
-    let nomeAmigo = input.value;
-
-    if(nome === "" ) {
-        alert("Por favor, insira um nome.");
-        return;
-    }
+function adicionarNomeAmigo() {
+let inputNome = document.getElementById('Insira um nome:').ValueText;
 }
 
-amigos.push(nomeAmigo);
-inputAmigo = "";
-inputAmigo.focus();
+if (inputNome == "") {
+    alert("Por favor, insira um nome.");
+        return;
+} else {
+    amigos.push(inputNome);
+    atualizaLiataAmigos();
+}
 
 function atualizarLista() {
     let listaAmigos = document.getElementById( "listaAmigos");
@@ -23,11 +21,15 @@ for (let i = 0; i < listaAmigos.length; i++);let item = document.createElement(l
 item.textContent = amigos[i].text;
 listaItem.appendChild(item);
 
-function sortearAmigo() {
-    if(amigos.length ===0) {
-        alert("Adicione um nome");
-        return;
-  }
+if(amigos.length ===0) {
+    function sortearAmigo() {
+        if(amigos.length ===0) {
+            alert("Adicione um nome");
+            return;
+      }    
+    alert("Adicione um nome");
+    return;
+}
 }
 
 let sorteado = amigos[Match.floor(Match.random() * amigos.length)];
@@ -36,5 +38,7 @@ resultado.innerHTML = `O seu amigo secreto é: ${sorteado}`;
 
 let limpaLista = document.getElementById()("listaAmigos");
     limparLista.innerHTML = "";
+
+
 
 
