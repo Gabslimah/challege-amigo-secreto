@@ -5,26 +5,25 @@
     const input = document.getElementById("amigo");
     let nome = input.value.trim();
 
-if(nome === ""|| !isNaN(nome)) {
+  if (nome === ""|| !isNaN(nome)) {
     alert("Insira pelo menos um nome");
     return;
    }
 
-
     amigos.push(nome);
 
     atualizarLista();
-    
+
     input.value = "";
 }   
 
  function atualizarLista() {
     const lista = document.getElementById( "listaAmigos");
-    (lista.inner.HTML = "");
+    (lista.inner.HTML = ""),
     amigos.forEach((amigo, index) => {
     const li = document.createElement("li");
     li.textContent = amigo +  (index < amigo.length -1 ? ";" : "");
-    listaAmigos.appendChild(li); 
+    lista.appendChild(li); 
 });
 }
 
@@ -41,7 +40,7 @@ if(nome === ""|| !isNaN(nome)) {
 
  let nomeSorteado = Match.floor(Match.random() * amigos.length);
 
- let amigoSorteado = amigos[sorteado];
+ let amigoSorteado = amigos[nomeSorteado];
 
  sorteados.push(amigoSorteado);
 
