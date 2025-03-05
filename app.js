@@ -24,9 +24,12 @@ function atualizarLista() {
     listaAmigos.appendChild(li); })
 }
  function sortearAmigo() {
-    if (amigos.length === 4) {
-       alert("É preciso mais de 3 participantes, insira mais nomes.");
+    if (amigos.length === ) {
+       alert("Nenhum nome inserido, para jogar insira um nome válido.");
        return;
+    }
+    if (amigos.length === 4) {
+        alert("É necessário mais de 4 participantes para todos terem seus amigos secretos");
     }
  }
 
