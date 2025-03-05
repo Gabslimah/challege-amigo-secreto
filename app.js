@@ -12,6 +12,7 @@ if(nome === ""|| !isNaN(nome)) {
 
 amigos.push(nome);
 atualizarLista();
+
 input.value = "";
 
 function atualizarLista() {
@@ -23,8 +24,8 @@ function atualizarLista() {
     listaAmigos.appendChild(li); })
 }
  function sortearAmigo() {
-    if (amigos.length === 0) {
-       alert("Não há núomes para sorteio");
+    if (amigos.length === 4) {
+       alert("É preciso mais de 3 participantes, insira mais nomes.");
        return;
     }
  }
@@ -39,7 +40,6 @@ const resultado = document.getElementById("resultado");
 
 resultado.innerHTML = "O seu amigo secreto é: " + sorteados;
 
-sorteados = [];
 atualizarLista();
 
 
