@@ -39,9 +39,10 @@ const resultado = document.getElementById("resultado");
 
 resultado.innerHTML = "O seu amigo secreto é: " + sorteados;
 
+sorteados = [];
+atualizarLista();
 
-let limparLista = document.getElementById()("listaAmigos");
-    limparLista.innerHTML = "";
+
 
 
 
