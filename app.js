@@ -2,8 +2,8 @@ let amigos = [];
 let sorteados = [];
 
  function adicionarAmigo() {
-    const input = document.getElementById('amigo');
-    let nome = input.value;
+    const input = document.getElementById("amigo");
+    let nome = input.value.trim();
 
 if(nome === ""|| !isNaN(nome)) {
     alert("Insira pelo menos um nome")
