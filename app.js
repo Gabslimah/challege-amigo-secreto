@@ -32,7 +32,7 @@
        alert("Nenhum nome inserido, para jogar insira um nome válido.");
        return;
     }
-    if (amigos.length === 4) {
+    if (amigos.length === 3) {
         alert("É necessário mais de 4 participantes para todos terem seus amigos secretos");
         return;
     }
