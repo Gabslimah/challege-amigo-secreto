@@ -11,18 +11,21 @@ if(nome === ""|| !isNaN(nome)) {
    }
 
 
-    amigos.push(item);
+    amigos.push(nome);
+
     atualizarLista();
+    
     input.value = "";
 }   
 
  function atualizarLista() {
-    let listaAmigos = document.getElementById( "listaAmigos");
-    listaAmigos.inner.HTML = "";
+    const lista = document.getElementById( "listaAmigos");
+    (lista.inner.HTML = "");
     amigos.forEach((amigo, index) => {
     const li = document.createElement("li");
     li.textContent = amigo +  (index < amigo.length -1 ? ";" : "");
-    listaAmigos.appendChild(li); });
+    listaAmigos.appendChild(li); 
+});
 }
 
  function sortearAmigo() {
@@ -36,7 +39,7 @@ if(nome === ""|| !isNaN(nome)) {
     }
  }
 
- let sorteado = Match.floor(Match.random() * amigos.length);
+ let nomeSorteado = Match.floor(Match.random() * amigos.length);
 
  let amigoSorteado = amigos[sorteado];
 
