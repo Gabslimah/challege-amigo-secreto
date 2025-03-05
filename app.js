@@ -20,7 +20,7 @@ function atualizarLista() {
     amigos.forEach((amigo,index) => {
         constli = document.createElement("li");
     limpaLista.textContent = amigo + (indx < amigos.length - 1 ? ";" : "");
-listaAmigos.appendChild(li); })
+    listaAmigos.appendChild(li); })
 }
  function sortearAmigo() {
     if (amigo.length === 0) {
@@ -29,14 +29,18 @@ listaAmigos.appendChild(li); })
     }
  }
 
-let sorteado = amigos[Match.floor(Match.random() * amigos.length)];
-console.log (sorteado);
+let sorteado = Match.floor(Match.random() * amigos.length);
+
+let amigoSorteado = amigos[sorteado];
+
+sorteados.push(amigoSorteado);
 
 const resultado = document.getElementById("resultado");
-resultado.innerHTML = `O seu amigo secreto é: ${sorteado}`;
+
+resultado.innerHTML = "O seu amigo secreto é: " + 
 
 
-let limpaLista = document.getElementById()("listaAmigos");
+let limparLista = document.getElementById()("listaAmigos");
     limparLista.innerHTML = "";
 
 
