@@ -18,9 +18,9 @@ input.value = "";
 function atualizarLista() {
     let listaAmigos = document.getElementById( "listaAmigos");
     listaAmigos.inner.HTML = "";
-    amigos.forEach((amigo,index) => {
-        const li = document.createElement("li");
-    limpaLista.textContent = amigo + (indx < amigos.length - 1 ? ";" : "");
+    amigos.forEach((amigo, index) => {
+    const li = document.createElement("li");
+    li.textContent = amigo +  (index < amigo.length -1 ? ";" : "");
     listaAmigos.appendChild(li); })
 }
  function sortearAmigo() {
