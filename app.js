@@ -24,7 +24,7 @@ function atualizarLista() {
     listaAmigos.appendChild(li); })
 }
  function sortearAmigo() {
-    if (amigos.length === ) {
+    if (amigos.length === 0) {
        alert("Nenhum nome inserido, para jogar insira um nome válido.");
        return;
     }
