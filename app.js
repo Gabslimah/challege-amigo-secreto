@@ -1,5 +1,5 @@
 let amigos = [];
-let soreados = [];
+let sorteados = [];
 
  function adicionarAmigo() {
     const input = document.getElementById('amigo');
@@ -18,12 +18,12 @@ function atualizarLista() {
     let listaAmigos = document.getElementById( "listaAmigos");
     listaAmigos.inner.HTML = "";
     amigos.forEach((amigo,index) => {
-        constli = document.createElement("li");
+        const li = document.createElement("li");
     limpaLista.textContent = amigo + (indx < amigos.length - 1 ? ";" : "");
     listaAmigos.appendChild(li); })
 }
  function sortearAmigo() {
-    if (amigo.length === 0) {
+    if (amigos.length === 0) {
        alert("Não há núomes para sorteio");
        return;
     }
