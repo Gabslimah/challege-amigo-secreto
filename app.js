@@ -19,7 +19,7 @@
 
  function atualizarLista() {
     const lista = document.getElementById( "listaAmigos");
-    (lista.inner.HTML = ""),
+    (lista.innerHTML = ""),
     amigos.forEach((amigo, index) => {
     const li = document.createElement("li");
     li.textContent = amigo +  (index < amigo.length -1 ? ";" : "");
@@ -38,7 +38,7 @@
     }
  }
 
- let nomeSorteado = Match.floor(Match.random() * amigos.length);
+ let nomeSorteado = Math.floor(Math.random() * amigos.length);
 
  let amigoSorteado = amigos[nomeSorteado];
 
