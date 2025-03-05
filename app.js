@@ -37,7 +37,7 @@ sorteados.push(amigoSorteado);
 
 const resultado = document.getElementById("resultado");
 
-resultado.innerHTML = "O seu amigo secreto é: " + 
+resultado.innerHTML = "O seu amigo secreto é: " + sorteados;
 
 
 let limparLista = document.getElementById()("listaAmigos");
