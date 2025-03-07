@@ -34,7 +34,7 @@
     }
      
     if (amigos.length <= 2) {
-        alert("É necessário um número par de participantes para todos terem seus amigos secretos");
+        alert("É necessário um número maior de participantes");
         return;
     }
  
