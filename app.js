@@ -33,7 +33,7 @@
        return;
     }
     if (amigos.length === 3) {
-        alert("É necessário mais de 4 participantes para todos terem seus amigos secretos");
+        alert("É necessário um número par de participantes para todos terem seus amigos secretos");
         return;
     }
  }
