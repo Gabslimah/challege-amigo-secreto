@@ -1,4 +1,5 @@
  let amigos = [];
+
  let sorteados = [];
 
  function adicionarAmigo() {
@@ -11,19 +12,18 @@
    }
 
     amigos.push(nome);
-
     atualizarLista();
 
     input.value = "";
 }   
 
  function atualizarLista() {
-    const lista = document.getElementById( "listaAmigos");
+    const lista = document.getElementById('listaAmigos');
     (lista.innerHTML = ""),
     amigos.forEach((amigo, index) => {
-    const li = document.createElement("li");
-    li.textContent = amigo +  (index < amigo.length -1 ? ";" : "");
-    lista.appendChild(li); 
+    const li = document.createElement("li"); 
+    li.textContent = amigo +  (index < amigos.length -1 ? "," : "");
+    lista.appendChild(li);
 });
 }
 
@@ -32,12 +32,13 @@
        alert("Nenhum nome inserido, para jogar insira um nome válido.");
        return;
     }
-    if (amigos.length === 3) {
+     
+    if (amigos.length <= 2) {
         alert("É necessário um número par de participantes para todos terem seus amigos secretos");
         return;
     }
- }
-
+ 
+   
  let nomeSorteado = Math.floor(Math.random() * amigos.length);
 
  let amigoSorteado = amigos[nomeSorteado];
@@ -45,10 +46,12 @@
  sorteados.push(amigoSorteado);
 
  const resultado = document.getElementById("resultado");
-
  resultado.innerHTML = "O seu amigo secreto é: " + sorteados;
-
+ 
   atualizarLista();
+   
+
+   }
 
 
 
